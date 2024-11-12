@@ -1,0 +1,37 @@
+
+.login-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100vh;
+    padding: 0 10%;
+    background: linear-gradient(45deg, #f9d423, #ff4e50, #ffb347, #ffcc33);
+    background-size: 400% 400%;
+    animation: gradientAnimation 10s ease infinite;
+}
+
+@keyframes gradientAnimation {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+
+.login-form {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    width: 40%; 
+}
+
+
+.quote-section {
+    width: 40%; 
+    text-align: center;
+    font-style: italic;
+    padding: 20px;
+    font-size: 30px;
+    border-radius: 8px;
+}
+
+
