@@ -10,18 +10,18 @@ const app = express();
 app.use(express.json());
 
 app.use(cors({
-    origin: "http://localhost:5173",  // React app URL
+    origin: "http://localhost:5173",  
     credentials: true
 }));
 
 app.use(session({
-    secret: "Secret", // A secret key for session
+    secret: "Secret", 
     resave: false,
     saveUninitialized: true,
     cookie: {
-        secure: false,  // Set to false for development (use true in production)
+        secure: false,  
         httpOnly: true,
-        maxAge: 24 * 60 * 60 * 1000  // Session expiration set to 1 day
+        maxAge: 24 * 60 * 60 * 1000  
     }
 }));
 
@@ -33,7 +33,7 @@ app.post('/login', async (req, res) => {
         const user = await UserModel.findOne({ name: name });
         if (user) {
             if (user.password === password) {
-                // Store the username in session after successful login
+                
                 req.session.username = name;
                 console.log("Session after Login: ", req.session);
                 return res.status(200).json("Success");
@@ -48,6 +48,15 @@ app.post('/login', async (req, res) => {
     }
 });
 
+app.get('/api/username', (req, res) => {
+    console.log("Session in /api/username:", req.session); 
+    if (req.session.username) {
+        res.json({ username: req.session.username });
+    } else {
+        res.status(401).json("Unauthorized: No session found");
+    }
+});
+
 app.post('/Signup', (req, res) => {
     UserModel.create(req.body)
         .then(user => res.json(user))
@@ -57,8 +66,8 @@ app.post('/Signup', (req, res) => {
 
 app.get('/api/quote', async (req, res) => {
     try {
-      const response = await axios.get('https://zenquotes.io/api/random'); // Or another API of choice
-      const quoteData = response.data[0]; // Adjust indexing based on API response format
+      const response = await axios.get('https://zenquotes.io/api/random'); 
+      const quoteData = response.data[0]; 
       res.json({ quote: quoteData.q, author: quoteData.a });
     } catch (error) {
       console.error("Error fetching quote:", error);

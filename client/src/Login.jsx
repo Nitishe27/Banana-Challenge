@@ -41,7 +41,7 @@ function Login() {
 
     return (
         <div className="login-container">
-            {/* Left side: Login form */}
+           
             <form onSubmit={handleSubmit} className="login-form">
                 <h3>Login</h3>
                 {errorMessage && <div className="alert alert-danger">{errorMessage}</div>}
@@ -72,7 +72,7 @@ function Login() {
                 <Link to='/signup' className='btn btn-secondary w-100'>Create Account</Link>
             </form>
 
-            {/* Right side: Quote */}
+      
             {quote && (
                 <div className="quote-section">
                     <h5>Happy Gaming:</h5>

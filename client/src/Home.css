@@ -1,0 +1,114 @@
+
+.home-container {
+    position: relative;
+    min-height: 100vh;
+    display: flex;
+    justify-content: flex-start; 
+    align-items: center;
+    background-color: #f7e17e; 
+    overflow: hidden;
+    padding-top: 60px; 
+    margin-top: 0%;
+    padding-top: 50px;
+  }
+  
+  
+  .banana-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('./Components/Banana.png'); 
+    background-repeat: repeat;
+    background-size: 50px 50px; 
+    opacity: 0.2; 
+    z-index: 0; 
+  }
+  
+  
+  .content-wrapper {
+    position: relative;
+    z-index: 1;
+    text-align: center;
+    width: 100%;
+    padding: 20px;
+    margin-top: -8%;
+    border-radius: 8px;
+  }
+  
+ 
+  .content-wrapper h1 {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); 
+  }
+  
+  
+  .content-wrapper h2 {
+    font-size: 1.5rem;
+    font-weight: normal;
+    color: #555;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2); 
+  }
+  
+ 
+  .instructions-notice {
+    background-color: #fff9c4; 
+    padding: 20px;
+    margin-top: 30px;
+    border: 2px solid #f4c542; 
+    border-radius: 10px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: left;
+    width: 60%; 
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  .instructions-notice h3 {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 10px;
+  }
+  
+  .instructions-notice ul {
+    list-style-type: disc;
+    padding-left: 20px;
+  }
+  
+  .instructions-notice li {
+    font-size: 1rem;
+    color: #555;
+  }
+  
+  .instruction-image {
+    width: 50px; 
+    height: auto; 
+    border-radius: 8px; 
+  }
+  
+  .start-game-button {
+    display: block; 
+    margin: 20px auto; 
+    padding: 12px 24px;
+    background-color: #f4c542;
+    color: #333;
+    font-size: 1rem;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 8px;
+    transition: background-color 0.3s ease;
+    text-align: center;
+    width: fit-content; 
+  }
+  
+  
+  .start-game-button:hover {
+    background-color: #d4a635;
+    color: #fff;
+  }
+  
