@@ -3,7 +3,9 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import Signup from './Signup';
 import Login from './Login';
 import Home from './Home';
+import Game from './Game';
 import HomeNavBar from './Components/Home-Navbar';
+import GameNavBar from './Components/Game-Navbar';
 
 function App() {
   return (
@@ -13,8 +15,15 @@ function App() {
         <Route path="/signup" element={<Signup />} />
         <Route path='/home' element={
           <>
-            <HomeNavBar /> {/* Inline NavBar included here */}
+            <HomeNavBar /> 
             <Home/>
+          </>
+        } />
+
+      <Route path='/game' element={
+          <>
+            <GameNavBar /> 
+            <Game/>
           </>
         } />
       </Routes>

@@ -1,0 +1,123 @@
+/* .home-container styles for general layout */
+.home-container {
+    position: relative;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f7e17e;
+    overflow: hidden;
+    padding-top: 80px; /* Adjust this value based on your navbar height */
+  }
+  
+  /* Banana background styles */
+  .banana-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('./Components/Banana.png'); /* Path to your banana image */
+    background-repeat: repeat;
+    background-size: 50px 50px; /* Reduced size of each banana */
+    opacity: 0.2; /* Opacity for the banana images */
+    z-index: 0; /* Keep the background behind other content */
+  }
+  
+  /* Wrapper for main content */
+  .content-wrapper {
+    position: relative;
+    z-index: 1;
+    text-align: center;
+    width: 100%;
+    margin-top: 5px;
+  }
+  
+  /* Container to hold both time, score, and hearts side by side */
+  .status-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px; /* Adjust spacing between items */
+    margin-bottom: 20px; /* Add space below the status container */
+    position: relative; /* Ensure all items inside stay at the same level */
+  }
+  
+  /* Individual style for time and score boxes */
+  .status-item {
+    font-size: 24px; /* Size for visibility */
+    font-weight: bold;
+    color: #ff4500; /* Match color to timer and score style */
+    padding: 5px 10px;
+    background-color: rgba(255, 69, 0, 0.2); /* Semi-transparent background */
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add depth with shadow */
+    font-family: 'Arial', sans-serif; /* Clean, readable font */
+    display: inline-block;
+    text-align: center;
+  }
+  
+  /* Container for hearts */
+  .hearts-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px; /* Space between hearts */
+    position: relative; /* Align hearts with timer and score */
+    z-index: 2; /* Ensure hearts are on top of other content */
+  }
+  
+  /* Styling for each heart image */
+  .heart-icon {
+    width: 30px; /* Set size for hearts */
+    height: 30px;
+    transition: opacity 0.3s ease; /* Smooth transition when disappearing */
+  }
+  
+  /* Game Over Modal */
+  .game-over-modal {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(0, 0, 0, 0.9); /* Darker background */
+    color: white;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+    z-index: 999; /* Ensure it appears on top of other content */
+  }
+  
+  /* Display message in modal */
+  .game-over-message {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+  }
+  
+  /* Container to align the Restart and End Game buttons side by side */
+  .button-container {
+    display: flex;
+    justify-content: center;
+    gap: 10px; /* Space between the buttons */
+    margin-top: 20px;
+  }
+  
+  /* Styling for buttons */
+  .restart-button, .end-game-button {
+    padding: 10px 20px;
+    background-color: #ff4500;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s ease;
+  }
+  
+  .restart-button:hover, .end-game-button:hover {
+    background-color: #e03c00;
+  }
+  
