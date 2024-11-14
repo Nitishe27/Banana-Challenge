@@ -24,6 +24,12 @@
     width: 40%; 
 }
 
+.instruction-image {
+    width: 50px; 
+    height: auto; 
+    border-radius: 8px; 
+  }
+
 
 .quote-section {
     width: 40%; 

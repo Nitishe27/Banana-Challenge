@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import axios from 'axios';
 import './Login.css'
+import BananaInstructionImage from './Components/Banana-instruction.png';
 
 function Login() {
     const [name, setName] = useState('');
@@ -75,7 +76,7 @@ function Login() {
       
             {quote && (
                 <div className="quote-section">
-                    <h5>Happy Gaming:</h5>
+                    <h5>Happy Gaming !! <img src={BananaInstructionImage} alt="Instructions" className="instruction-image" /></h5>
                     <p>"{quote}" - {quoteAuthor}</p>
                 </div>
             )}
