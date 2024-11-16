@@ -4,8 +4,10 @@ import Signup from './Signup';
 import Login from './Login';
 import Home from './Home';
 import Game from './Game';
+import LeaderBoard from './LeaderBoard';
 import HomeNavBar from './Components/Home-Navbar';
 import GameNavBar from './Components/Game-Navbar';
+import LeaderBoardNavBar from './Components/LeaderBoard-NavBar';
 
 function App() {
   return (
@@ -24,6 +26,13 @@ function App() {
           <>
             <GameNavBar /> 
             <Game/>
+          </>
+        } />
+
+<Route path='/leaderboard' element={
+          <>
+            <LeaderBoardNavBar /> 
+            <LeaderBoard/>
           </>
         } />
       </Routes>

@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import axios from 'axios';
 import './Login.css';
+import BananaInstructionImage from './Components/Banana-instruction.png';
 
 function Signup() {
     const [name, setName] = useState('');
@@ -81,7 +82,7 @@ function Signup() {
 
             {quote && (
                 <div className="quote-section p-4 d-flex flex-column justify-content-center align-items-center">
-                    <h5>Happy Gaming:</h5>
+                    <h5>Happy Gaming !!<img src={BananaInstructionImage} alt="Instructions" className="instruction-image" /></h5>
                     <p>"{quote}" - {quoteAuthor}</p>
                 </div>
             )}
