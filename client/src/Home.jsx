@@ -37,9 +37,9 @@ function Home() {
           <ul>
             <li>Click on the numbered buttons to guess the solution.</li>
             <li>If you guess correctly, a new image will be generated!</li>
-            <li>Keep playing to challenge your skills!</li>
             <li>The game will terminate after the 70-second timer is up.</li>
             <li>You have three hearts; one will vanish for each wrong response. The game ends if all three are gone.</li>
+            <li>Keep playing to challenge your skills!</li>
           </ul>
 
           
