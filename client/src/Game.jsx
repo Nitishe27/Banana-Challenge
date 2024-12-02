@@ -94,6 +94,7 @@ function Game() {
       <div className="content-wrapper">
         {bananaData ? (
           <div>
+            <div className="left-section">
             <div className="status-container">
               <div className="hearts-container">
                 <p className="status-item">Lives:</p>
@@ -119,6 +120,8 @@ function Game() {
                 e.target.src = "https://via.placeholder.com/150";
               }}
             />
+            </div>
+            <div className="right-section">
             <div className="mt-4">
               {Array.from({ length: 10 }, (_, i) => (
                 <button
@@ -136,6 +139,7 @@ function Game() {
                 Start Now
               </button>
             )}
+            </div>
             {isGameOver && (
               <div className="game-over-modal">
                 <p className="game-over-message">Game Over !</p>

@@ -32,6 +32,26 @@
     width: 100%;
     margin-top: 5px;
   }
+
+  /* Left section styles */
+.left-section {
+  flex: 1;
+  margin-right: 350px;
+  margin-top: -150px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Right section styles */
+.right-section {
+  flex: 1;
+  margin-left: 800px;;
+  margin-top: -300px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
   
   /* Container to hold both time, score, and hearts side by side */
   .status-container {
