@@ -34,7 +34,7 @@ function Game() {
   useEffect(() => {
     if (isTimerRunning && timeLeft > 0 && hearts > 0) {
       const timer = setInterval(() => {
-        setTimeLeft((prevTime) => prevTime - 1);
+        setTimeLeft((prevTime) => prevTime - 1);//I referred codepen.io as referrences for building the react timer.
       }, 1000);
 
       return () => clearInterval(timer); 
@@ -70,7 +70,7 @@ function Game() {
   const handleEndGame = () => {
     
     axios
-      .post("http://localhost:3001/api/score", { score }, { withCredentials: true })
+      .post("http://localhost:3001/api/score", { score }, { withCredentials: true })//I referred Axios Documentation for building API between client and server
       .then((response) => {
         console.log("Score saved:", response.data); 
         navigate("/leaderboard"); 
@@ -123,6 +123,7 @@ function Game() {
             </div>
             <div className="right-section">
             <div className="mt-4">
+            <div className="button-container">
               {Array.from({ length: 10 }, (_, i) => (
                 <button
                   key={i}
@@ -134,6 +135,8 @@ function Game() {
                 </button>
               ))}
             </div>
+            </div>
+            <br></br>
             {!isTimerRunning && !isGameOver && (
               <button onClick={handleStartClick} className="btn btn-success mt-4">
                 Start Now
@@ -163,3 +166,6 @@ function Game() {
 }
 
 export default Game;
+
+
+
