@@ -28,7 +28,7 @@ function LeaderBoard() {
 
         
         const userRank = leaderboardResponse.data.findIndex((entry) => entry.username === userResponse.data.username) + 1;
-        setRank(userRank);
+        setRank(userRank); //referred Stackoverflow
 
 
 
