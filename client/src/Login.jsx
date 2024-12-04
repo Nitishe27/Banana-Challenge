@@ -29,7 +29,7 @@ function Login() {
     const handleSubmit = async (e) => {
         e.preventDefault();
         try {
-            const result = await axios.post('http://localhost:3001/login', { name, password }, { withCredentials: true });
+            const result = await axios.post('http://localhost:3001/login', { name, password }, { withCredentials: true });//I referred Axios Documentation for building API between client and server
             if (result.data === "Success") {
                 navigate('/home');
             } else {
@@ -85,3 +85,4 @@ function Login() {
 }
 
 export default Login;
+

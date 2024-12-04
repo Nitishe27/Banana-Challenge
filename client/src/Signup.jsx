@@ -80,7 +80,7 @@ function Signup() {
                 </form>
             
 
-            {quote && (
+            {quote && ( // conditional rendering expression in React
                 <div className="quote-section p-4 d-flex flex-column justify-content-center align-items-center">
                     <h5>Happy Gaming !!<img src={BananaInstructionImage} alt="Instructions" className="instruction-image" /></h5>
                     <p>"{quote}" - {quoteAuthor}</p>
@@ -91,3 +91,4 @@ function Signup() {
 }
 
 export default Signup;
+
